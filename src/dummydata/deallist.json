@@ -1,0 +1,71 @@
+[
+    {
+        "id": "1",
+        "type": "Food",
+        "title": "6 Pieces of KFC Chicken for £6.99",
+        "description": "In-store only, get a KFC chicken bucket for £6.99 every tuesday",
+        "venue": "KFC",
+        "weekDays": {
+            "mon": false,
+            "tue": true,
+            "wed": false,
+            "thu": false,
+            "fri": false,
+            "sat": false,
+            "sun": false
+        },
+        "activeHours": {
+            "from": 8,
+            "to": 22
+        },
+        "expiry": "1580227991160",
+        "datePosted": "1580227691160",
+        "author": "Ethan Drain"
+    },
+    {
+        "id": "2",
+        "type": "Drink",
+        "title": "BOGOF cocktails between",
+        "description": "All customers get buy one get one free cocktails all night",
+        "venue": "The Bowery",
+        "weekDays": {
+            "mon": true,
+            "tue": true,
+            "wed": true,
+            "thu": true,
+            "fri": true,
+            "sat": true,
+            "sun": true
+        },
+        "activeHours": {
+            "from": 8,
+            "to": 22
+        },
+        "expiry": "1580227991160",
+        "datePosted": "1580227691160",
+        "author": "John Flannel"
+    },
+    {
+        "id": "3",
+        "type": "Drink",
+        "title": "Free drinks all night",
+        "description": "In-store only, get a KFC chicken bucket for £6.99 every tuesday",
+        "venue": "The Big Bag",
+        "weekDays": {
+            "mon": true,
+            "tue": false,
+            "wed": true,
+            "thu": true,
+            "fri": false,
+            "sat": true,
+            "sun": true
+        },
+        "activeHours": {
+            "from": 21,
+            "to": 24
+        },
+        "expiry": "1580227991160",
+        "datePosted": "1580227691160",
+        "author": "David Towel"
+    }
+]

@@ -1,0 +1,25 @@
+{
+  "name": "mealdeal",
+  "version": "1.0.0",
+  "description": "a collection of food/drink deals within different regions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsmarsh/MealDeal.git"
+  },
+  "keywords": [
+    "react",
+    "javascript",
+    "react-redux",
+    "spa"
+  ],
+  "author": "@missingmarshall - github/rsmarsh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rsmarsh/MealDeal/issues"
+  },
+  "homepage": "https://github.com/rsmarsh/MealDeal#readme"
+}

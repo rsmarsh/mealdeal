@@ -32,8 +32,8 @@ class DealList extends React.Component {
     render() {
         return (
             <div>
-                <Typography>Deal List</Typography>
-                <Typography>Offers: {this.props.deals.length}</Typography>
+                <Typography variant="h3">Deal List</Typography>
+                <Typography variant="subtitle1">Offers: {this.props.deals.length}</Typography>
 
                 {this.renderList()}
             </div>

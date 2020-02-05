@@ -1,5 +1,6 @@
 import React from 'react';
 
+import TopBar from './TopBar'
 import DealList from './DealList';
 
 import { Container } from '@material-ui/core';
@@ -8,9 +9,12 @@ import './App.css';
 
 const App = () => {
     return (
-        <Container maxWidth="sm">
-            <DealList />
-        </ Container>
+        <div>
+            <TopBar />
+            <Container maxWidth="sm">
+                <DealList />
+            </ Container>
+        </div>
     );
 }
 

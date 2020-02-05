@@ -10,9 +10,11 @@ const MiniDeal = (props) => {
             <Typography variant="h5">{props.title}</Typography>
             <Typography variant="subtitle2">{props.venue}</Typography>
             <Typography variant="body2">{props.description}</Typography>
-            <Button className="view-deal" variant="contained" color="primary">
-                View Deal
-            </Button>
+            <div className="view-deal">
+                <Button variant="contained" color="primary">
+                    View Deal
+                </Button>
+            </div>
 
         </Paper>
     )

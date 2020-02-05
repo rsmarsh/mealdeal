@@ -1,0 +1,27 @@
+Views to create:
+    - View Single Deal
+    - Create Deal
+    - View deals belonging to one venue
+    - View deals active now
+    - View deals belonging to one city (possible merge with above item)
+    - Edit a deal
+    - Delete a deal
+    - Map view of deals
+    - View favourited deals
+
+Pages:
+    - Log in 
+    - Register
+    
+Visual: 
+    - Modal from material
+    - Form design + material inputs
+    - Persistant header with user and site controls
+
+Functional:
+    - integrate React Router
+    - Add Database
+    - Add environment variables
+    - Ability to favourite a deal
+    - Ability to set home city
+    

@@ -12,11 +12,14 @@ Views to create:
 Pages:
     - Log in 
     - Register
-    
+    - About
+
 Visual: 
     - Modal from material
     - Form design + material inputs
     - Persistant header with user and site controls
+    - left side Drawer component when clicking the hamburger
+    - Home page intro, what we do and strive for 
 
 Functional:
     - integrate React Router
@@ -24,4 +27,6 @@ Functional:
     - Add environment variables
     - Ability to favourite a deal
     - Ability to set home city
+    - Admin mode (delete deal)
+    - Report incorrect/spam deal
     

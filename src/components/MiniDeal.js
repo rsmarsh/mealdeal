@@ -1,18 +1,20 @@
 import React from 'react';
 
-import Button from '@material-ui/core/Button';
+import {Typography, Paper, Button}  from '@material-ui/core';
+
+import './MiniDeal.css';
 
 const MiniDeal = (props) => {
     return (
-        <div>
-            <h2>{props.title}</h2>
-            <h3>{props.venue}</h3>
-            <p>{props.description}</p>
-            <Button variant="contained" color="primary">
+        <Paper elevation={1} className="deal-wrapper">
+            <Typography variant="h5">{props.title}</Typography>
+            <Typography variant="subtitle2">{props.venue}</Typography>
+            <Typography variant="body2">{props.description}</Typography>
+            <Button className="view-deal" variant="contained" color="primary">
                 View Deal
             </Button>
 
-        </div>
+        </Paper>
     )
 };
 

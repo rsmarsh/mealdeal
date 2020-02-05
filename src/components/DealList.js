@@ -3,6 +3,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchDeals } from '../actions';
 
+import Typography from '@material-ui/core/Typography';
+
 import MiniDeal from './MiniDeal';
 
 
@@ -30,8 +32,8 @@ class DealList extends React.Component {
     render() {
         return (
             <div>
-                <h1>Deal List</h1>
-                <h2>Offers: {this.props.deals.length}</h2>
+                <Typography>Deal List</Typography>
+                <Typography>Offers: {this.props.deals.length}</Typography>
 
                 {this.renderList()}
             </div>

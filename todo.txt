@@ -27,6 +27,14 @@ Functional:
     - Add environment variables
     - Ability to favourite a deal
     - Ability to set home city
-    - Admin mode (delete deal)
-    - Report incorrect/spam deal
-    
+    - OAuth2 login 
+
+Storyboard feature check:
+    - visit home page as a new user
+    - sign up/log in 
+    - view favourited deals
+    - add a new deal
+    - see my new deal on a page
+    - edit something on my new deal
+    - delete my new deal
+    - log out

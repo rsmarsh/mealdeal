@@ -2,7 +2,10 @@ import React from 'react';
 
 import TopBar from './TopBar'
 import DealList from './DealList';
+import CreateDeal from './CreateDeal';
+import EditDeal from './EditDeal';
 
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Container } from '@material-ui/core';
 
 import './App.css';
@@ -10,10 +13,30 @@ import './App.css';
 const App = () => {
     return (
         <div>
-            <TopBar />
-            <Container maxWidth="sm">
-                <DealList />
-            </ Container>
+            <Router>
+                <TopBar />
+
+                <Container maxWidth="sm">
+
+                    {/* Home page with full deal list */}
+                    <Route path="/" exact>
+                        <DealList />
+                    </Route>
+
+                    {/* Create a deal page */}
+                    <Route path="/deals/create" exact>
+                        <CreateDeal />
+                    </Route>
+
+                    {/* Edit a deal page */}
+                    <Route path="/deals/edit" exact>
+                        <EditDeal />
+                    </Route>
+
+
+
+                </ Container>
+            </Router>
         </div>
     );
 }

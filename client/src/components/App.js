@@ -29,9 +29,7 @@ const App = () => {
                     </Route>
 
                     {/* Edit a deal page */}
-                    <Route path="/deals/edit" exact>
-                        <EditDeal />
-                    </Route>
+                    <Route path="/deals/edit/:id?" component={EditDeal} />
 
 
 

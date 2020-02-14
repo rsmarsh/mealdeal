@@ -19,19 +19,13 @@ const App = () => {
                 <Container maxWidth="sm">
 
                     {/* Home page with full deal list */}
-                    <Route path="/" exact>
-                        <DealList />
-                    </Route>
+                    <Route path="/" exact component={DealList} />
 
                     {/* Create a deal page */}
-                    <Route path="/deals/create" exact>
-                        <CreateDeal />
-                    </Route>
+                    <Route path="/deals/create" exact component={CreateDeal} />
 
                     {/* Edit a deal page */}
                     <Route path="/deals/edit/:id?" component={EditDeal} />
-
-
 
                 </ Container>
             </Router>

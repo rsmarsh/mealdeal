@@ -1,4 +1,5 @@
 import React from 'react';
+import { createDeal } from '../apis/deals';
 import { Formik, Form, Field } from 'formik';
 
 import { Typography, Button, LinearProgress } from '@material-ui/core';
@@ -7,15 +8,15 @@ import { TextField } from 'formik-material-ui';
 import './CreateDeal.css';
 
 class CreateDeal extends React.Component {
-    
+
     handleFormSubmit(values) {
-        console.log("form submission attempted");
-        console.log(values);
+        //validate form here or use formik built in validation
+        createDeal(values);
     }
 
     renderLoadingBar(isSubmitting) {
         if (isSubmitting) {
-            return <LinearProgress className/>;
+            return <LinearProgress />;
         } else {
             return null;
         }

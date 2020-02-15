@@ -7,10 +7,10 @@ import { TextField } from 'formik-material-ui';
 
 import './CreateDeal.css';
 
+
 class CreateDeal extends React.Component {
 
     handleFormSubmit(values) {
-        //validate form here or use formik built in validation
         createDeal(values);
     }
 
@@ -20,6 +20,31 @@ class CreateDeal extends React.Component {
         } else {
             return null;
         }
+    }
+
+    validateForm(values) {
+        // required inputs are:
+        //     - dealTitle
+        //     - dealDescription
+        //     - dealVenue
+        //     - dealLocation
+
+        // this object is gradually built up with 
+        const errors = {};
+        const errorMessages = {
+            dealTitle: "Please add a deal title",
+            dealDescription : "Type a short description",
+            dealVenue: "Name the restaurant or bar",
+            dealLocation: "Where is the deal?"
+        }
+        
+        errors.dealTitle = values.dealTitle ? undefined : errorMessages.dealTitle;
+        errors.dealDescription = values.dealDescription ? undefined : errorMessages.dealDescription;
+        errors.dealVenue = values.dealVenue ? undefined : errorMessages.dealVenue;
+        errors.dealLocation = values.dealLocation ? undefined : errorMessages.dealLocation;
+
+        // formik will automatically check this object to see if any fields were missed/invalid
+        return errors;
     }
 
     render() {
@@ -36,6 +61,7 @@ class CreateDeal extends React.Component {
                         dealVenue: '',
                         dealLocation: ''
                     }}
+                    validate={this.validateForm}
                     onSubmit={this.handleFormSubmit}
                 >
                     {({ submitForm, isSubmitting }) => (

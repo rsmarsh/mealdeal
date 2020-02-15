@@ -1,6 +1,5 @@
 Views to create:
     - View Single Deal
-    - Create Deal
     - View deals belonging to one venue
     - View deals active now
     - View deals belonging to one city (possible merge with above item)
@@ -15,19 +14,17 @@ Pages:
     - About
 
 Visual: 
-    - Modal from material
-    - Form design + material inputs
     - Persistant header with user and site controls
     - left side Drawer component when clicking the hamburger
     - Home page intro, what we do and strive for 
 
 Functional:
-    - integrate React Router
     - Add Database
     - Add environment variables
     - Ability to favourite a deal
     - Ability to set home city
-    - OAuth2 login 
+    - OAuth2 login (Google, Twitter)
+    - register using just username and password
 
 Storyboard feature check:
     - visit home page as a new user

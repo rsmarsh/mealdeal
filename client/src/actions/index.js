@@ -1,7 +1,7 @@
-import dealList from '../apis/deals';
+import { getDeals } from '../apis/deals';
 
 export const fetchDeals = () => async (dispatch, getState) => {
-    const response = await dealList.getDeals();
+    const response = await getDeals();
 
     dispatch({
         type: 'FETCH_DEALS',

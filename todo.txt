@@ -20,7 +20,6 @@ Visual:
 
 Functional:
     - Add Database
-    - Add environment variables
     - Ability to favourite a deal
     - Ability to set home city
     - OAuth2 login (Google, Twitter)
@@ -35,3 +34,14 @@ Storyboard feature check:
     - edit something on my new deal
     - delete my new deal
     - log out
+
+API Endpoints:
+    - Add deal to database
+    - Edit existing deal in database
+    - get all deals list
+    - delete deal
+    - get deals with filters
+    - get user profile
+    - create new user
+    - get deals created by one user
+    - get favourite deals belonging to one user

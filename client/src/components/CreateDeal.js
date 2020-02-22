@@ -70,6 +70,8 @@ class CreateDeal extends React.Component {
                         dealLocation: ''
                     }}
                     validate={this.validateForm}
+                    validateOnChange={false}
+                    validateOnBlur={true}
                     onSubmit={this.handleFormSubmit}
                 >
                     {({ submitForm, isSubmitting }) => (

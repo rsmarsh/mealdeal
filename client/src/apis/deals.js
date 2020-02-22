@@ -1,13 +1,12 @@
 import dealListJSON from '../dummydata/deallist';
 import axios from 'axios';
 
+const serverPort = '3001';
 const axiosRequester = axios.create({
-    baseURL: document.location.origin
+    baseURL: `${document.location.protocol}//${document.location.hostname}:${serverPort}/api`;
 });
 
 export const createDeal = (formValues) => {
-    console.log(axiosRequester);
-    console.log("create deal in apis");
     axiosRequester.post('/deals/create', {
         ...formValues
     });

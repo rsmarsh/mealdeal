@@ -24,6 +24,9 @@ Functional:
     - Ability to set home city
     - OAuth2 login (Google, Twitter)
     - register using just username and password
+    - return 200 to OPTIONS requests to prevent 204 tripping up some browsers
+    - reusable validation for back-end validation to match the fornt-end equivalent
+    - After deal creation, receive the "success" response and proceed accordingly
 
 Storyboard feature check:
     - visit home page as a new user
@@ -45,3 +48,4 @@ API Endpoints:
     - create new user
     - get deals created by one user
     - get favourite deals belonging to one user
+

@@ -23,27 +23,35 @@ class CreateDeal extends React.Component {
     }
 
     validateForm(values) {
-        // required inputs are:
-        //     - dealTitle
-        //     - dealDescription
-        //     - dealVenue
-        //     - dealLocation
 
-        // this object is gradually built up with 
+        // this object is populated with any validation errors then returned 
         const errors = {};
+        
+        const requiredFields = [
+            'dealTitle',
+            'dealDescription',
+            'dealVenue',
+            'dealLocation'
+        ];
+
         const errorMessages = {
             dealTitle: "Please add a deal title",
             dealDescription : "Type a short description",
             dealVenue: "Name the restaurant or bar",
-            dealLocation: "Where is the deal?"
+            dealLocation: "Where is the deal?",
+            DEFAULT: "Required Field"
+        };
+         
+        // iterate over the required field names
+        for (const field of requiredFields) {
+            // check each entry against the submitted values object to ensure that each required field is present 
+            if (!values[field]) {
+                // if a required field wasn't entered, return the custom validation message or the default placeholder
+                errors[field] = errorMessages[field] || errorMessages.DEFAULT;
+            }
         }
-        
-        errors.dealTitle = values.dealTitle ? undefined : errorMessages.dealTitle;
-        errors.dealDescription = values.dealDescription ? undefined : errorMessages.dealDescription;
-        errors.dealVenue = values.dealVenue ? undefined : errorMessages.dealVenue;
-        errors.dealLocation = values.dealLocation ? undefined : errorMessages.dealLocation;
 
-        // formik will automatically check this object to see if any fields were missed/invalid
+        // formik will then automatically check this object to see if any fields were missed/invalid, and add it to the matching field name
         return errors;
     }
 

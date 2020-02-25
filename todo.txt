@@ -28,6 +28,12 @@ Functional:
     - reusable validation for back-end validation to match the fornt-end equivalent
     - After deal creation, receive the "success" response and proceed accordingly
 
+Nice-to-have Functionality:
+    - Image upload along with deal      
+    - Autocompleting venue field from an API
+    - Deal Comments
+    - Deal Rating system 
+
 Storyboard feature check:
     - visit home page as a new user
     - sign up/log in 

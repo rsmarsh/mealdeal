@@ -12,7 +12,7 @@ router.get('/:id', (req, res) => {
 // Create a new deal
 router.post('/create', (req, res) => {
 
-    console.log("reveiced the following new deal:");
+    console.log("received the following new deal:");
     console.log(req.body);
 
     res.status(200).json({success: true});

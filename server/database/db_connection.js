@@ -1,4 +1,4 @@
-const credentials = require('../credentials/database.json');
+const credentials = require('../credentials/database');
 const mysql = require('mysql');
 
 let pool = mysql.createPool({
@@ -10,7 +10,7 @@ let pool = mysql.createPool({
 });
 
 // Open a connection from the pool
-// The connection is passed cos the provided callback function
+// The connection is passed as an argument to the provided callback function
 let getConnection = function(cb){
     if (!cb) {
         return console.error("getConnection called without callback");
@@ -19,7 +19,7 @@ let getConnection = function(cb){
     pool.getConnection((err, conn) => {
         //pass false to the callback, allowing it to handle the error gracefully
         if (err) {
-            cb(false);
+            cb(err);
             throw err;
         }
         // pass the open connection to the provided callback

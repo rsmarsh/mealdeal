@@ -3,13 +3,15 @@ import axios from 'axios';
 
 const serverPort = '3001';
 const axiosRequester = axios.create({
-    baseURL: `${document.location.protocol}//${document.location.hostname}:${serverPort}/api`;
+    baseURL: `${document.location.protocol}//${document.location.hostname}:${serverPort}/api`
 });
 
-export const createDeal = (formValues) => {
+export const create = (formValues) => {
     axiosRequester.post('/deals/create', {
         ...formValues
     });
 };
 
-export const getDeals = () => dealListJSON;
+export const getAll = () => dealListJSON;
+
+export default {create, getAll};

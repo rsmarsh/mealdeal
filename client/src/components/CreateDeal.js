@@ -1,6 +1,6 @@
 import React from 'react';
-import { createDeal } from '../apis/deals';
-import { Formik, Form, Field } from 'formik';
+import { connect } from 'react-redux';
+import { createDeal } from '../actions';
 
 import { Formik, Form, Field } from 'formik';
 import { Typography, Button, LinearProgress } from '@material-ui/core';
@@ -11,8 +11,8 @@ import './CreateDeal.css';
 
 class CreateDeal extends React.Component {
 
-    handleFormSubmit(values) {
-        createDeal(values);
+    handleFormSubmit = (values) => {
+        this.props.createDeal(values);
     }
 
     renderLoadingBar(isSubmitting) {
@@ -142,4 +142,5 @@ class CreateDeal extends React.Component {
     
 }
 
-export default CreateDeal;
+// This form does not currently require access to the redux state, only the createDeal action
+export default connect(null, { createDeal })(CreateDeal);

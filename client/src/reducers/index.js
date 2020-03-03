@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import DealList from './DealList';
+import dealReducer from './dealReducer';
 
 export default combineReducers({
-    deals: DealList
+    deals: dealReducer
 });

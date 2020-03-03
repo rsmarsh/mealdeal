@@ -2,6 +2,7 @@ import React from 'react';
 import { createDeal } from '../apis/deals';
 import { Formik, Form, Field } from 'formik';
 
+import { Formik, Form, Field } from 'formik';
 import { Typography, Button, LinearProgress } from '@material-ui/core';
 import { TextField } from 'formik-material-ui';
 
@@ -55,6 +56,64 @@ class CreateDeal extends React.Component {
         return errors;
     }
 
+    // Formik passes a lot of info to this funciton, only a few key values are required
+    renderForm = ({submitForm, isSubmitting}) => {
+        return (
+            <Form className="create-deal">
+
+                {/* Deal Title */}
+                <Field
+                    component={TextField}
+                    name="dealTitle"
+                    type="text"
+                    label="Deal Title"
+                    className="form-input"
+                />
+                <br />
+
+                {/* Deal Description */}
+                <Field
+                    component={TextField}
+                    name="dealDescription"
+                    type="text"
+                    label="Description"
+                    className="form-input"
+                />
+                <br />
+
+                {/* Deal Venue */}
+                <Field
+                    component={TextField}
+                    name="dealVenue"
+                    type="text"
+                    label="Venue Name"
+                    className="form-input"
+                />
+                <br />
+
+                {/* Deal Location */}
+                <Field
+                    component={TextField}
+                    name="dealLocation"
+                    type="text"
+                    label="Town/City"
+                    className="form-input"
+                />
+                <br />
+                {this.renderLoadingBar(isSubmitting)}
+                <Button
+                    className="submit"
+                    variant="contained"
+                    color="primary"
+                    disabled={isSubmitting}
+                    onClick={submitForm}
+                >
+                    Submit deal
+                </Button>
+            </Form>
+        );
+    }
+
     render() {
         return (
             <div>
@@ -74,60 +133,8 @@ class CreateDeal extends React.Component {
                     validateOnBlur={true}
                     onSubmit={this.handleFormSubmit}
                 >
-                    {({ submitForm, isSubmitting }) => (
-
-                        <Form className="create-deal">
-                            {/* Deal Title */}
-                            <Field
-                                component={TextField}
-                                name="dealTitle"
-                                type="text"
-                                label="Deal Title"
-                                className="form-input"
-                            />
-                            <br />
-
-                            {/* Deal Description */}
-                            <Field
-                                component={TextField}
-                                name="dealDescription"
-                                type="text"
-                                label="Description"
-                                className="form-input"
-                            />
-                             <br />
-
-                            {/* Deal Venue */}
-                            <Field
-                                component={TextField}
-                                name="dealVenue"
-                                type="text"
-                                label="Venue Name"
-                                className="form-input"
-                            />
-                             <br />
-
-                            {/* Deal Location */}
-                            <Field
-                                component={TextField}
-                                name="dealLocation"
-                                type="text"
-                                label="Town/City"
-                                className="form-input"
-                            />
-                            <br />
-                            {this.renderLoadingBar(isSubmitting)}
-                            <Button
-                                className="submit"
-                                variant="contained"
-                                color="primary"
-                                disabled={isSubmitting}
-                                onClick={submitForm}
-                            >
-                                Submit deal
-                            </Button>
-                        </Form>
-                    )}
+                    {/* Formik as a HOC automatically passes useful parameters to this function */}
+                    {this.renderForm}
                 </ Formik>
             </div>
         )

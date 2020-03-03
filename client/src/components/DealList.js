@@ -43,7 +43,9 @@ class DealList extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    return {deals: state.deals};
+    return {
+        deals: Object.values(state.deals)
+    };
 };
 
 export default connect(

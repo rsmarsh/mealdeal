@@ -19,7 +19,6 @@ Visual:
     - Home page intro, what we do and strive for 
 
 Functional:
-    - Add Database
     - Ability to favourite a deal
     - Ability to set home city
     - OAuth2 login (Google, Twitter)

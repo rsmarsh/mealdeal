@@ -29,17 +29,17 @@ class CreateDeal extends React.Component {
         const errors = {};
         
         const requiredFields = [
-            'dealTitle',
-            'dealDescription',
-            'dealVenue',
-            'dealLocation'
+            'title',
+            'description',
+            'venue',
+            'location'
         ];
 
         const errorMessages = {
-            dealTitle: "Please add a deal title",
-            dealDescription : "Type a short description",
-            dealVenue: "Name the restaurant or bar",
-            dealLocation: "Where is the deal?",
+            title: "Please add a deal title",
+            description : "Type a short description",
+            venue: "Name the restaurant or bar",
+            location: "Where is the deal?",
             DEFAULT: "Required Field"
         };
          
@@ -64,7 +64,7 @@ class CreateDeal extends React.Component {
                 {/* Deal Title */}
                 <Field
                     component={TextField}
-                    name="dealTitle"
+                    name="title"
                     type="text"
                     label="Deal Title"
                     className="form-input"
@@ -74,7 +74,7 @@ class CreateDeal extends React.Component {
                 {/* Deal Description */}
                 <Field
                     component={TextField}
-                    name="dealDescription"
+                    name="description"
                     type="text"
                     label="Description"
                     className="form-input"
@@ -84,7 +84,7 @@ class CreateDeal extends React.Component {
                 {/* Deal Venue */}
                 <Field
                     component={TextField}
-                    name="dealVenue"
+                    name="venue"
                     type="text"
                     label="Venue Name"
                     className="form-input"
@@ -94,7 +94,7 @@ class CreateDeal extends React.Component {
                 {/* Deal Location */}
                 <Field
                     component={TextField}
-                    name="dealLocation"
+                    name="location"
                     type="text"
                     label="Town/City"
                     className="form-input"
@@ -123,10 +123,10 @@ class CreateDeal extends React.Component {
 
                 <Formik
                     initialValues={{
-                        dealTitle: '',
-                        dealDescription: '',
-                        dealVenue: '',
-                        dealLocation: ''
+                        title: '',
+                        description: '',
+                        venue: '',
+                        location: ''
                     }}
                     validate={this.validateForm}
                     validateOnChange={false}

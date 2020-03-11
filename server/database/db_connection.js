@@ -1,4 +1,4 @@
-const credentials = require('../credentials/database');
+const credentials = require('../credentials/database.js');
 const mysql = require('mysql');
 
 let pool = mysql.createPool({

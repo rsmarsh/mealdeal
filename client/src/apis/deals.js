@@ -1,4 +1,4 @@
-import dealListJSON from '../dummydata/deallist';
+import dealListJSON from '../dummydata/deallist'; // TODO replace this with real data from the database
 import axios from 'axios';
 
 const serverPort = '3001';
@@ -7,7 +7,7 @@ const axiosRequester = axios.create({
 });
 
 export const create = (formValues) => {
-    axiosRequester.post('/deals/create', {
+    return axiosRequester.post('/deals/create', {
         ...formValues
     });
 };

@@ -5,4 +5,4 @@ const dbCredentials = {
     password: process.env.DB_USER || "DBPASSWORD"
 };
 
-export default dbCredentials; 
+module.exports =  dbCredentials; 

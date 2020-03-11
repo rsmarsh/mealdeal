@@ -37,12 +37,15 @@ const TopBar = () => {
 
             <AppBar position="static">
                 <Toolbar>
+                    {/* TODO - make hamburger icon trigger open a menu */}
                     <IconButton edge="start" className={classes.menuButton} aria-label="menu">
                         <MenuIcon color="inherit" />
                     </IconButton>
+                    {/* TODO - make the home button a Link element */} 
                     <Typography variant="h6" className={classes.title}>
                         Home
                     </Typography>
+                    {/* TODO - make login open a login box/login page */}
                     <Button color="inherit">
                         Login
                     </Button>

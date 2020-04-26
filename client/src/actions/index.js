@@ -13,10 +13,11 @@ export const fetchDeals = () => async (dispatch, getState) => {
 }
 // DONEXT parse the CREATE_DEAL response from the reducer
 export const createDeal = formValues => async (dispatch, getState) => {
+    const response = await dealsAPI.create(formValues)
+        .catch(e => console.log("Deal creation error, ", e));
     
-    const response = await dealsAPI.create(formValues);
-    // for scenarios where the server failed to response or an error occured, the data property may be undefined
-    const resData = response?.data?.success || false;
+        // for scenarios where the server failed to response or an error occured, the data property may be undefined
+    let resData = response?.data?.success || false;
 
     dispatch({
         type: 'CREATE_DEAL',

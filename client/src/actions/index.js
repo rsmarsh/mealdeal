@@ -1,4 +1,5 @@
 import dealsAPI from '../apis/deals';
+import history from '../history';
 
 export const fetchDeals = () => async (dispatch, getState) => {
     const response = await dealsAPI.getAll();
@@ -20,5 +21,12 @@ export const createDeal = formValues => async (dispatch, getState) => {
     dispatch({
         type: 'CREATE_DEAL',
         payload: resData
-    })
+    });
+
+    if (resData !== false) {
+        // programmatically push the user back to the homepage after a creation
+        history.push('/');
+    } else {
+        // TODO: let the create form page and user know that the deal creation request failed 
+    }
 }

@@ -11,7 +11,7 @@ export const fetchDeals = () => async (dispatch, getState) => {
     });
     
 }
-// DONEXT parse the CREATE_DEAL response from the reducer
+// DONEXT test the CREATE_DEAL response which is passed to the reducer
 export const createDeal = formValues => async (dispatch, getState) => {
     const response = await dealsAPI.create(formValues)
         .catch(e => console.log("Deal creation error, ", e));
@@ -29,5 +29,6 @@ export const createDeal = formValues => async (dispatch, getState) => {
         history.push('/');
     } else {
         // TODO: let the create form page and user know that the deal creation request failed 
+        // TODO: prevent console error appearing when the error occurs
     }
 }

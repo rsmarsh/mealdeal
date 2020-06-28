@@ -13,6 +13,7 @@ import MiniDeal from './MiniDeal';
 class DealList extends React.Component {
     componentDidMount() {
         // initiate data retrieval 
+        // TODONEXT: fetch a new deal list each time the home is visited
         this.props.fetchDeals();
     }
 

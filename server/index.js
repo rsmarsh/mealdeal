@@ -11,7 +11,6 @@ const routes = require('./routes');
 const whitelist = ['http://localhost:3000'];
 const corsOptions = {
     origin: (origin, callback) => {
-        console.log("origin check");
         if (whitelist.includes(origin) !== -1) {
             callback(null, true);
         } else {

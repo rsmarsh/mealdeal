@@ -12,6 +12,7 @@ export const create = (formValues) => {
     });
 };
 
+// TODONEXT: switch the json file for the database
 export const getAll = () => dealListJSON;
 
 export default {create, getAll};

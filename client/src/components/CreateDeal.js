@@ -11,6 +11,14 @@ import './CreateDeal.css';
 
 class CreateDeal extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            isSubmitting: false,
+            dealCount: props.dealCount
+        };
+      }
+
     handleFormSubmit = (values) => {
         this.props.createDeal(values);
     }
@@ -58,6 +66,13 @@ class CreateDeal extends React.Component {
 
     // Formik passes a lot of info to this funciton, only a few key values are required
     renderForm = ({submitForm, isSubmitting}) => {
+
+        // if the deal has been submit successfully, as there are now more deals than when we first loaded the form
+        if (isSubmitting && this.props.dealCount > this.state.dealCount) {
+            this.props.history.push('/');
+        }
+        // TODO: error when the deal creation fails
+
         return (
             <Form className="create-deal">
 
@@ -140,7 +155,13 @@ class CreateDeal extends React.Component {
         )
     }
     
-}
+};
+
+const mapStateToProps = (state) => {
+    return {
+        dealCount: Object.values(state.deals).length
+    };
+};
 
 // This form does not currently require access to the redux state, only the createDeal action
-export default connect(null, { createDeal })(CreateDeal);
+export default connect(mapStateToProps, { createDeal })(CreateDeal);
